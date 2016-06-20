@@ -1,0 +1,20 @@
+package Test;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test {
+	public static void main(String[] args) {
+		Test t = new Test();
+		t.test4();
+	}
+
+	public void test4() {
+		Pattern pattern = Pattern.compile("(.+?)\\(R(.+?)\\)");
+		Matcher matcher = pattern.matcher("avg(R4)");
+		if (matcher.find()) {
+			System.out.println(matcher.group(1));// 分组的索引值是从1开始的，所以取第一个分组的方法是m.group(1)而不是m.group(0)。
+			System.out.println(matcher.group(2));
+		}
+	}
+}

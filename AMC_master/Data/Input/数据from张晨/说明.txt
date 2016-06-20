@@ -1,0 +1,15 @@
+1.domains文件夹中包含10个csv文件，用来训练prior knowledge。10个csv文件一共1.5万行，每一行代表一个文档，即训练数据一共1.5万篇文档。
+
+2.testData文件夹中包含1600个csv文件。每个csv代表一个文档，即1600篇文档。
+
+3.你可能需要对testData中的csv进行处理，因为当前testData中的csv是按照句子分行的，你需要将其合并成一行。而domians文件夹中的csv，每一行就代表一篇文档。
+
+4.跑的时候参数选择：alfa=0.02，beta=0.5，K=22.
+
+
+amc code：
+FileReaderAndWriter:line58			BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream(aFile),"UTF-8"));
+amcModelRunningTask:line135	if omit
+input100ReviewCorporeaDirectory && input1000ReviewCorporeaDirectory
+nthreads = 4
+alfa=0.02，beta=0.5，K=22
